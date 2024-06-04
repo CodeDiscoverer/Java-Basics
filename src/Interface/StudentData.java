@@ -44,7 +44,9 @@ interface PersonalData {
     }
 
     public void displayData() {
-        System.err.println("Hello, " + name + "! Your details are listed below");
+        System.err.println("-------------------------------------");
+        System.err.println("Hello, " + name + "! Your details are listed below...");
+        System.err.println("-------------------------------------");
         System.out.println("Roll No: " + rollNo);
         System.out.println("Department: " + department);
         System.out.println("Contact No: " + contactNo);
