@@ -2,17 +2,17 @@ package Interface;
 
 import java.util.Scanner;
 
-interface PersonalData{
-    void getPersonalData();
-}
-
-interface OfficialData{
+interface OfficialData {
     void getOfficialData();
 }
 
-class Data implements PersonalData, OfficialData{
+interface PersonalData {
+    void getPersonalData();
+}
 
-    int contactNo;
+ class Data implements OfficialData, PersonalData {
+
+    long contactNo;
     String name, rollNo, bloodGroup, department, DOB;
 
     @Override
@@ -26,7 +26,7 @@ class Data implements PersonalData, OfficialData{
         System.out.print("Enter your Department: ");
         department = read.nextLine();
 
-        read.close();
+        //read.close();
     }
 
     @Override
@@ -38,12 +38,12 @@ class Data implements PersonalData, OfficialData{
         System.out.print("Enter your Date of Birth: ");
         DOB = read.nextLine();
         System.out.print("Enter your Contact Number: ");
-        contactNo = read.nextInt();
+        contactNo = read.nextLong();
 
-        read.close();
+        //read.close();
     }
 
-    public void displayData(){
+    public void displayData() {
         System.err.println("Hello, " + name + "! Your details are listed below");
         System.out.println("Roll No: " + rollNo);
         System.out.println("Department: " + department);
