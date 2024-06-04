@@ -22,7 +22,7 @@ class Data implements PersonalData, OfficialData{
         System.out.print("Enter your Name: ");
         name = read.nextLine();
         System.out.print("Enter your Roll Number: ");
-        rollNo = read.next();
+        rollNo = read.nextLine();
         System.out.print("Enter your Department: ");
         department = read.nextLine();
 
@@ -34,7 +34,7 @@ class Data implements PersonalData, OfficialData{
         Scanner read = new Scanner(System.in);
 
         System.out.print("Enter your Blood Group: ");
-        bloodGroup = read.next();
+        bloodGroup = read.nextLine();
         System.out.print("Enter your Date of Birth: ");
         DOB = read.nextLine();
         System.out.print("Enter your Contact Number: ");
