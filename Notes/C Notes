@@ -1,0 +1,38 @@
+### Theory
+1. C Program Structure (Doc, Link, Define, Declaration Var, Main Fun, Sub Programs)
+2. Token (Keywords, Identifiers, Constants, Strings, Special, Symbol, Operators)
+3. variables (Local, Global, Static, Auto, External)
+4. IMP (Operators, ctrl statements, Strings, Arrays)
+5. User-defined Headder files
+6. is function (isalpha...)
+
+### Programs
+1. Add using without "+"
+2. Input:
+   Suriya
+   prasad
+   Krithvik
+   Output:
+   6
+   6
+   8
+3. Multiple Values in Single Variable using ptr
+4. Print ASCII Values
+5. Positive Negative Number using Iternity Opt
+
+### Assessments
+
+Add using without "+"
+Input: Suriya prasad Krithvik Output: 6 6 8
+Multiple Values in Single Variable using ptr
+Print ASCII Values
+Positive Negative Number using Iternity Opt
+
+
+C Program Structure (Doc, Link, Define, Declaration Var, Main Fun, Sub Programs)
+Token (Keywords, Identifiers, Constants, Strings, Special, Symbol, Operators)
+variables (Local, Global, Static, Auto, External)
+IMP (Operators, ctrl statements, Strings, Arrays)
+User-defined Headder files
+is function (isalpha...)
+
