@@ -1,0 +1,30 @@
+### Java Architecture
+- Source Code --> Java Compiler -->
+
+### Java Section
+ - Comment Section --> Package Section --> Import Statements --> Interface Statements --> Class Section --> Main Methods
+
+### Type Size
+  - Double -> Float -> Long -> Integer -> Char -> Short -> Byte
+
+### Data Types
+- Primitive
+ 	- Boolean
+ 	- Numeric
+ 		- Char
+ 		- Integral
+ 			- Integer
+ 				- byte
+ 				- short
+ 				- int
+ 				- long
+ 			- Float Point
+ 				- Float
+ 				- Double
+
+- Non Primitive
+ 	- String
+ 	- Array
+ 	- ect...
+
+### Interface
