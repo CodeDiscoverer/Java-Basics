@@ -1,0 +1,35 @@
+Collection = Interface (List, Queue, Dequeue, Set)
+Collections = Class (ArrayList, Vector, LinkedList, PriorityQueue, HashSet, LinkedHashSet, TreeSet)
+
+Java Collection means a single unit of objects.
+
+Framework - Ready made Architecture, Represents set of classes  and Interfaces
+
+Collection Framework - Unified Architecture for storing and manipulating a group of objects.
+
+Hierarchy of Collection Framework   [-> Extends => Implements]
+= Iterable -> Collection
+                -> List
+                    => ArrayList
+                    => LinkedList
+                    => Vector
+                        -> Stack
+                -> Queue
+                  -> Dequeue
+                    => PriorityQueue
+                    => ArrayDeque
+                -> Set
+                    => HashSet
+                    => LinkedHashSet
+                  ->SortedSet
+                    => TreeSet
+
+Methods common in Collection
+ - add()
+ - size()
+ - remove()
+ - iterator()
+ - addAll()
+ - removeAll()
+ - clear()
+
