@@ -13,28 +13,28 @@ public class KingSoldier {
 
         String[] words = sentence.split(" ");
 
-        HashMap<Integer, String> wordLengthMap = new HashMap<>();
+        HashMap<Integer, String> wordAsciiMap = new HashMap<>();
 
         for (String word : words) {
-            int length = word.length();
-            if(!wordLengthMap.containsKey(length)){
-                wordLengthMap.put(length, word);
+            int asciiSum = 0;
+            for (char c : word.toCharArray()) {
+                asciiSum += c;
             }
-
+            if (!wordAsciiMap.containsKey(asciiSum)) {
+                wordAsciiMap.put(asciiSum, word);
+            }
         }
 
-        List<Integer> lengths = new ArrayList<>(wordLengthMap.keySet());
-        Collections.sort(lengths);
+        List<Integer> asciiSums = new ArrayList<>(wordAsciiMap.keySet());
+        Collections.sort(asciiSums);
 
-        int max = lengths.getLast();
-        System.out.println("The King is " + wordLengthMap.get(max));
+        int maxAsciiSum = asciiSums.get(asciiSums.size() - 1);
+        System.out.println("The King is " + wordAsciiMap.get(maxAsciiSum));
 
+        int secondMaxAsciiSum = asciiSums.get(asciiSums.size() - 2);
+        System.out.println("The Soldier is " + wordAsciiMap.get(secondMaxAsciiSum));
 
-        int secondMax = lengths.get(lengths.size() - 2);
-        System.out.println("The Soldier is " + wordLengthMap.get(secondMax));
-
-
-        int min = lengths.get(0);
-        System.out.println("The Beggar is " + wordLengthMap.get(min));
+        int minAsciiSum = asciiSums.get(0);
+        System.out.println("The Beggar is " + wordAsciiMap.get(minAsciiSum));
     }
 }
