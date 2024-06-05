@@ -20,9 +20,7 @@ public class KingSoldier {
             for (char c : word.toCharArray()) {
                 asciiSum += c;
             }
-            if (!wordAsciiMap.containsKey(asciiSum)) {
-                wordAsciiMap.put(asciiSum, word);
-            }
+            wordAsciiMap.put(asciiSum, word);
         }
 
         List<Integer> asciiSums = new ArrayList<>(wordAsciiMap.keySet());
