@@ -8,7 +8,7 @@ public class KingSoldier {
 
         Scanner read = new Scanner(System.in);
 
-        System.out.print("Enter a sentence:");
+        System.out.print("Enter a sentence: ");
         String sentence = read.nextLine();
 
         String[] words = sentence.split(" ");
