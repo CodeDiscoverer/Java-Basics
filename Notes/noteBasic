@@ -27,4 +27,13 @@
  	- Array
  	- ect...
 
-### Interface
+### this Keyword
+"this" can be used to refer current class instance variable
+
+Class Student{
+    String name;
+
+    Student(String name){
+        this.name = name; // here this.classVariable = methodVariable
+    }
+}
