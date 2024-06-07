@@ -23,10 +23,12 @@ public class StudentDB {
             String q = read.nextLine();
             {
                 System.out.println("Enter 5 Subject Marks: ");
+
                 for(int j=0; j<5; j++){
-                float r = read.nextFloat();
-                s += r;
-                per = s/5;}
+                    float r = read.nextFloat();
+                     s += r;
+                    per = s/5;
+                }
             }
             StudentData.put(p,q);
             StudentMark.put(p, per);
@@ -34,16 +36,39 @@ public class StudentDB {
 
         System.out.println("\nData Base: ");
         for (Map.Entry<Integer,String> entry : StudentData.entrySet()) {
-            System.out.print(entry.getKey() +" "+ entry.getValue() + " ");
-            System.out.println((StudentMark.get(entry.getKey())*5) + " " + StudentMark.get(entry.getKey()));
+            System.out.print(entry.getKey() +" - "+ entry.getValue() + " - ");
+            System.out.print((StudentMark.get(entry.getKey())*5) + " - " + StudentMark.get(entry.getKey()));
+            System.out.println(" - " + calculateGrade(StudentMark.get(entry.getKey())));
         }
-
 
         System.out.print("\nSearch roll number to find : ");
         int rollNoSearch=read.nextInt();
 
-        System.out.print("The Roll no " + rollNoSearch + " is " + StudentData.get(rollNoSearch));
-        System.out.println(". The Total is " + (StudentMark.get(rollNoSearch)*5) + " the percentage is " + StudentMark.get(rollNoSearch));
+        if(StudentData.get(rollNoSearch) != null ){
+            System.out.print("The Roll no " + rollNoSearch + " is " + StudentData.get(rollNoSearch));
+            System.out.println(". The Total is " + (StudentMark.get(rollNoSearch)*5) + " the percentage is "
+                    + StudentMark.get(rollNoSearch) + " The Grade is " + calculateGrade(StudentMark.get(rollNoSearch)));
+        }
+        else{
+            System.err.println("Invalid Roll Number " + rollNoSearch);
+        }
 
+    }
+    public static String calculateGrade(float percentage) {
+        if (percentage >= 90) {
+            return "A+";
+        } else if (percentage >= 80) {
+            return "A";
+        } else if (percentage >= 70) {
+            return "B+";
+        } else if (percentage >= 60) {
+            return "B";
+        } else if (percentage >= 50) {
+            return "C+";
+        } else if (percentage >= 40) {
+            return "C";
+        } else {
+            return "F";
+        }
     }
 }

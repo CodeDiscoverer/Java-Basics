@@ -19,15 +19,16 @@ class Student{
         System.out.println("Your Percentage is " +percentage);
     }
 }
+
 public class This {
+    public static void main(String[] args) {
+        Scanner read = new Scanner(System.in);
 
-    Scanner read = new Scanner(System.in);
+        String name = read.nextLine();
+        int rollNo = read.nextInt();
+        float percentage = read.nextFloat();
 
-    String n = read.nextLine();
-    int rNo = read.nextInt();
-    float p = read.nextFloat();
-
-    Student s = new Student(221, "Suriya", 95);
-
-
+        Student s = new Student(rollNo, name, percentage);
+        s.printDetails();
+    }
 }
