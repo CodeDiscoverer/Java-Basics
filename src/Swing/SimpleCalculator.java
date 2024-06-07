@@ -26,11 +26,9 @@ public class SimpleCalculator {
         JButton equalsButton = new JButton("=");
         JButton clearButton = new JButton("C");
 
-        // Set fonts
         Font buttonFont = new Font("Arial", Font.BOLD, 20);
         textField.setFont(buttonFont);
 
-        // Set button sizes
         Dimension buttonSize = new Dimension(60, 60);
         addButton.setPreferredSize(buttonSize);
         subtractButton.setPreferredSize(buttonSize);
@@ -111,7 +109,6 @@ public class SimpleCalculator {
                 textField.setText("");
                 isFirstInput = false;
             } else {
-                // Allow only one operator per calculation
                 textField.setText("Error");
             }
         }
@@ -146,7 +143,6 @@ public class SimpleCalculator {
                 textField.setText(String.valueOf(result));
                 isFirstInput = true;
             } else {
-                // No operation has been selected
                 textField.setText("Error");
             }
         }
