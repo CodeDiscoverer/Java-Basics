@@ -28,6 +28,8 @@ public class CaloriesBurnCalc {
         JButton clear = new JButton("CLEAR");
         JButton calculate = new JButton("CALCULATE");
 
+        JLabel conversionLabel = new JLabel("");
+
         inputLabel.setBounds(50, 30, 150, 30);
         stepsRadio.setBounds(200, 30, 100, 30);
         distanceRadio.setBounds(300, 30, 200, 30);
@@ -35,6 +37,7 @@ public class CaloriesBurnCalc {
         stepsLabel.setBounds(50, 110, 150, 30);
         distanceField.setBounds(200, 70, 150, 30);
         stepsField.setBounds(200, 110, 150, 30);
+        conversionLabel.setBounds(50, 190, 300, 30);
         clear.setBounds(50, 150, 100, 30);
         calculate.setBounds(200, 150, 150, 30);
 
@@ -45,6 +48,7 @@ public class CaloriesBurnCalc {
         frame.add(stepsLabel);
         frame.add(distanceField);
         frame.add(stepsField);
+        frame.add(conversionLabel);
         frame.add(clear);
         frame.add(calculate);
 
@@ -54,9 +58,11 @@ public class CaloriesBurnCalc {
                 if (stepsRadio.isSelected()) {
                     distanceField.setEnabled(false);
                     stepsField.setEnabled(true);
+                    conversionLabel.setText("1500 steps = 1 kilometer");
                 } else {
                     distanceField.setEnabled(true);
                     stepsField.setEnabled(false);
+                    conversionLabel.setText("1 kilometer = 1500 steps");
                 }
             }
         };
