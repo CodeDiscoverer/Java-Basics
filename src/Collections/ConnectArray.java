@@ -23,7 +23,7 @@ public class ConnectArray {
             arr2[i] = read.nextInt();
         }
 
-        System.out.print("The Wave Array is: ");
+        System.out.print("The Array is: ");
         for(int i=0, j=(n)-1; i<n; i++){
             System.out.print(arr1[i] + " " + arr2[j] +" ");
             j--;

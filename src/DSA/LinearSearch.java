@@ -20,7 +20,7 @@ public class LinearSearch {
         int target = read.nextInt();
 
         for(int val:arr){
-            System.out.print((val == target) ? "Yes" : "");
+            System.out.print((val == target) ? " Yes " : "No");
         }
     }
 }
