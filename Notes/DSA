@@ -1,0 +1,9 @@
+It is a way ofd organising, storing and managing data effictively to perform various operations on data and also it provides efficient access, update and retrival of data.
+
+Well Defined - Questions, Inputs and Output
+
+Time Complexity:-
+    Best - O(1) - Constant Time. (Basic and Desicion Making)
+    Good - O(n) - Linear Time. (Loop)
+    Bad - O(n^2) - Quadratic Time. (Nested Loop)
+    Worst - O(log n) - Logarithmic Time (Divide and Conquer)
