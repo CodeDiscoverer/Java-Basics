@@ -3,7 +3,7 @@ It is a way ofd organising, storing and managing data effictively to perform var
 Well Defined - Questions, Inputs and Output
 
 Time Complexity:-
-    Best - O(1) - Constant Time. (Basic and Desicion Making)
+    Best - O(1) - Constant Time. (Basic and Decision Making)
     Good - O(n) - Linear Time. (Loop)
     Bad - O(n^2) - Quadratic Time. (Nested Loop)
     Worst - O(log n) - Logarithmic Time (Divide and Conquer)
