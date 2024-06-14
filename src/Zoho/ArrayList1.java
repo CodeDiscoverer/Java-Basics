@@ -23,7 +23,7 @@ public class ArrayList1 {
             list.add(read.nextInt());
         }
 
-        Collections.sort(list);
+        //Collections.sort(list);
 
         System.out.print("The Output is 👉");
         for(int k :list){
