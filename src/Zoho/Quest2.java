@@ -14,6 +14,12 @@ public class Quest2 {
         System.out.print("Enter Value of n: ");
         int n = read.nextInt();
 
+        System.out.println("Enter " + n + " Values into Array List: ");
+        for(int i=0; i<n; i++){
+            list.add(read.nextInt());
+        }
+
+
 
     }
 }
