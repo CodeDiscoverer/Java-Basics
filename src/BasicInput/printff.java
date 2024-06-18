@@ -6,6 +6,6 @@ public class printff {
         int n= 123;
         String str= "Suriya";
 
-        System.out.printf("%d %h %s", n, n, str);
+        System.out.printf("%b %o %d %h %s",n, n, n, n, str);
     }
 }
