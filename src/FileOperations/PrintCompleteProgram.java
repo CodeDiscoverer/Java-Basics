@@ -8,7 +8,7 @@ public class PrintCompleteProgram {
 
         char[] arr = new char[1000];
         System.err.println("The Source of the File is Printed Below 👇");
-        // Oops you are viewing File...
+        // Oops you are viewing File so this line executed before...
         try (FileReader reader = new FileReader("D:\\IntelliJ Idea\\TechnicalTraining\\JavaFundamentals\\src\\FileOperations\\PrintCompleteProgram.java")) {
 
             int charsRead = reader.read(arr);
