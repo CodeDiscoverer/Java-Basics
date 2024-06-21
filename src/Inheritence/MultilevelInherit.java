@@ -21,5 +21,6 @@ public class MultilevelInherit {
     public static void main(String[] args) {
 
         Son s = new Son();
+
     }
 }
