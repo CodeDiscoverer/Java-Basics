@@ -8,13 +8,13 @@ class GrandFather {
 
 class Father extends GrandFather{
     Father(){
-        System.out.println("Its a GrandFather");
+        System.out.println("Its a Father");
     }
 }
 
 class Son extends Father{
     Son(){
-        System.out.println("Its a GrandFather");
+        System.out.println("Its a Son");
     }
 }
 public class MultilevelInherit {
