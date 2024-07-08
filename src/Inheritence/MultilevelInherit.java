@@ -3,7 +3,6 @@ package Inheritence;
 class GrandFather {
     GrandFather(){
         System.out.println("Its a GrandFather");
-
     }
 }
 
