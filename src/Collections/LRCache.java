@@ -4,13 +4,13 @@ import java.util.*;
 
 public class LRCache {
     private static final Deque<Integer> cache = new LinkedList<>();
-    private static final int MAX_CAPACITY = 4;
+    private static final int MAX = 4;
 
     public static void addElement(int element) {
 
         if (cache.contains(element)) {
             cache.remove(element);
-        } else if (cache.size() >= MAX_CAPACITY) {
+        } else if (cache.size() >= MAX) {
             cache.removeLast();
         }
         cache.addFirst(element);
