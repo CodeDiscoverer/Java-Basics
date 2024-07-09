@@ -17,6 +17,7 @@ class Son extends Father{
         System.out.println("Its a Son");
     }
 }
+
 public class MultilevelInherit {
     public static void main(String[] args) {
 
