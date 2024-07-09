@@ -10,7 +10,8 @@ public class LRCache {
 
         if (cache.contains(element)) {
             cache.remove(element);
-        } else if (cache.size() >= MAX) {
+        }
+        else if (cache.size() >= MAX) {
             cache.removeLast();
         }
         cache.addFirst(element);
