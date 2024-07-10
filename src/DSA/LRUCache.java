@@ -1,8 +1,10 @@
-package Collections;
+package DSA;
 
-import java.util.*;
+import java.util.Deque;
+import java.util.LinkedList;
+import java.util.Scanner;
 
-public class LRCache {
+public class LRUCache {
     private static final Deque<Integer> cache = new LinkedList<>();
     private static final int MAX = 4;
 
@@ -20,11 +22,11 @@ public class LRCache {
     public static void main(String[] args) {
         Scanner read = new Scanner(System.in);
 
-        System.out.println("1. Add Element\n2. Display Queue\n0. Exit\n");
+        System.out.println("1. Add Element\n2. Display Queue\n0. Exit");
         int choice;
 
         do {
-            System.out.print("Enter Your Choice: ");
+            System.out.print("\nEnter Your Choice: ");
             choice = read.nextInt();
 
             switch (choice) {
