@@ -20,7 +20,6 @@ public class LRUCache2 {
         map.put(key, value);
     }
 
-
     public static void main(String[] args) {
         Scanner read = new Scanner(System.in);
 
