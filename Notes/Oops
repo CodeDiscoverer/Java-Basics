@@ -7,3 +7,54 @@ private: Accessible only within the same class.
 protected: Accessible within the same class, subclasses(not necessarily in the same package),
 and other classes in the same package.
 Default (package-private): Accessible within the same package.
+
+Static in Java
+In Java, when you declare a member as static, it means that the member belongs
+to the class itself rather than to any specific instance of the class.
+Here's how static is used in Java:
+
+Static Fields (Class Variables):
+
+You can access static fields using the class name or directly from an instance of the class,
+but it's more common to use the class name.
+Static fields are initialized only once when the class is loaded.
+public class MyClass {
+    public static int count = 0; // Static field
+}
+
+
+Static Methods:
+
+You can call static methods using the class name.
+Static methods can't access instance-level members directly
+because they don't have access to an instance of the class.
+public class MyClass {
+    public static void staticMethod() {
+        // Static method
+    }
+}
+
+
+Static Blocks:
+
+Static blocks are used to initialize static fields or perform any other static
+setup when the class is loaded.
+They are executed only once when the class is loaded,
+before any static method or constructor is called.
+public class MyClass {
+    static {
+        // Static block
+    }
+}
+
+
+Static Nested Classes:
+
+You can define a static nested class within another class.
+Static nested classes are associated with the outer class and do not
+require an instance of the outer class to be created.
+public class OuterClass {
+    static class StaticNestedClass {
+        // Static nested class
+    }
+}
