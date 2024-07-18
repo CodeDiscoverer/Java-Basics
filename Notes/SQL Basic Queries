@@ -1,0 +1,159 @@
+-- GRANT ALL PRIVILEGES ON Menu TO SURIYA;
+-- SYS, SYSTEM, PDBADMIN (Default Users)
+-- IF THE TABLE IS OWNED BY SYS WE ARE NOT ABLE TO CREATE THE TRIGGER
+
+CREATE USER krithvik IDENTIFIED BY "Krit";
+
+CREATE TABLE Menu (
+    ItemID INT PRIMARY KEY,
+    ItemName VARCHAR(50) NOT NULL,
+    Category VARCHAR(30) NOT NULL,
+    Price DECIMAL(10, 2) NOT NULL,
+    UNIQUE (ItemName),
+    CHECK (Price >= 0)
+);
+DESC Menu;
+
+DROP TABLE Menu;
+
+INSERT INTO Menu (ItemID, ItemName, Category, Price)
+VALUES (1, 'Burger', 'Main Dish', 220);
+
+INSERT INTO Menu (ItemID, ItemName, Category, Price)
+VALUES (2, 'Pizza', 'Main Dish', 360);
+
+INSERT INTO Menu (ItemID, ItemName, Category, Price)
+VALUES (3, 'Mutton Biriyani', 'Main Dish', 280);
+
+INSERT INTO Menu (ItemID, ItemName, Category, Price)
+VALUES (4, 'Chicken Biriyani', 'Main Dish', 180);
+
+INSERT INTO Menu (ItemID, ItemName, Category, Price)
+VALUES (101, 'Rasamalai', 'Dessert', 80);
+
+INSERT INTO Menu (ItemID, ItemName, Category, Price)
+VALUES (102, 'Choco Truffle', 'Dessert', 85);
+
+INSERT INTO Menu VALUES(&ItemID, '&ItemName', '&Category', &Price);
+
+SELECT * FROM Menu;
+SELECT * FROM Menu WHERE Category = 'Main Dish';
+SELECT ItemName, Price FROM Menu WHERE Category = 'Dessert';
+SELECT * FROM Menu WHERE Price <= 200;
+SELECT ItemName, Category FROM Menu WHERE Price > 300;
+
+UPDATE Menu SET Price = 240 WHERE ItemName = 'Burger';
+UPDATE Menu SET Price = 340 WHERE ItemName = 'Pizza';
+UPDATE Menu SET Price = 80 WHERE ItemName = 'Choco Truffle';
+UPDATE Menu SET Price = 200 WHERE ItemName = 'Burger';
+UPDATE Menu SET Price = 380 WHERE ItemName = 'Pizza';
+
+DELETE FROM Menu WHERE ItemName = 'Burger';
+
+SELECT SUM(Price) AS TotalPriceOfMainDishes FROM Menu WHERE Category = 'Main Dish';
+SELECT COUNT(*) AS NumberOfDesserts FROM Menu WHERE Category = 'Dessert';
+SELECT AVG(Price) AS AveragePriceOfMainDishes FROM Menu WHERE Category = 'Main Dish';
+
+SELECT ItemID, ItemName, Category, Price, Price + 20 AS UpdatedPrice
+FROM Menu;
+
+SELECT ItemID, ItemName, Category, Price, Price - 10 AS DiscountedPrice
+FROM Menu;
+
+SELECT ItemID, ItemName, Category, Price, Price + 15 AS IncreasedPrice
+FROM Menu;
+
+CREATE TABLE Customers (
+    CustomerID INT PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50)
+);
+DESC Customers;
+
+INSERT INTO Customers (CustomerID, FirstName, LastName)
+VALUES (1, 'Suriya', 'Prasath');
+INSERT INTO Customers (CustomerID, FirstName, LastName)
+VALUES (2, 'Sanjai', 'Kumar');
+INSERT INTO Customers (CustomerID, FirstName, LastName)
+VALUES (3, 'Aswin', 'Thiru');
+
+INSERT INTO Customers VALUES (&CustomerID, '&FirstName', '&LastName');
+SELECT * FROM Customers;
+
+CREATE TABLE Orders (
+    OrderID INT PRIMARY KEY,
+    CustomerID INT,
+    ItemID INT,
+    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID),
+    FOREIGN KEY (ItemID) REFERENCES Menu(ItemID)
+);
+
+DESC Orders;
+
+INSERT INTO Orders (OrderID, CustomerID, ItemID)
+VALUES(1, 1, 2);  -- Suriya Prasath ordered a Pizza
+INSERT INTO Orders (OrderID, CustomerID, ItemID)
+VALUES(2, 2, 102);  -- Sanjai Kumar ordered a Choco Truffle
+INSERT INTO Orders (OrderID, CustomerID, ItemID)
+VALUES(3, 3, 3);  -- Aswin Thiru ordered a Mutton Biriyani
+INSERT INTO Orders (OrderID, CustomerID, ItemID)
+VALUES(4, 1, 101);  -- Suriya Prasath ordered a Rasamalai
+
+INSERT INTO Orders VALUES (&OrderID, &CustomerID, &ItemID);
+SELECT * FROM Orders;
+
+SELECT Customers.FirstName, Customers.LastName, Menu.ItemName
+FROM Customers
+INNER JOIN Orders ON Customers.CustomerID = Orders.CustomerID
+INNER JOIN Menu ON Orders.ItemID = Menu.ItemID;
+
+SELECT Customers.FirstName, Customers.LastName, Menu.ItemName
+FROM Customers
+LEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID
+LEFT JOIN Menu ON Orders.ItemID = Menu.ItemID;
+
+SELECT Customers.FirstName, Customers.LastName, Menu.ItemName
+FROM Customers
+RIGHT JOIN Orders ON Customers.CustomerID = Orders.CustomerID
+RIGHT JOIN Menu ON Orders.ItemID = Menu.ItemID;
+
+SELECT Customers.FirstName, Customers.LastName, Menu.ItemName
+FROM Customers
+FULL OUTER JOIN Orders ON Customers.CustomerID = Orders.CustomerID
+FULL OUTER JOIN Menu ON Orders.ItemID = Menu.ItemID;
+
+SELECT Category, AVG(Price) AS AvgPrice
+FROM Menu
+GROUP BY Category
+HAVING AVG(Price) > 250;
+
+SELECT ItemName, Price
+FROM Menu
+ORDER BY Price ASC;
+
+SELECT ItemName, Price
+FROM Menu
+ORDER BY Price DESC;
+
+SELECT *
+FROM Menu
+WHERE ItemName = 'Pizza';
+
+CREATE VIEW PriceRangeMenu AS
+SELECT ItemName, Price
+FROM Menu
+WHERE Price BETWEEN 200 AND 300;
+
+SELECT *
+FROM PriceRangeMenu;
+
+SELECT SUM(Price) AS TotalPrice FROM Menu;
+SELECT COUNT(*) AS TotalOrders FROM Orders;
+SELECT AVG(Price) AS AveragePrice FROM Menu;
+SELECT MAX(Price) AS CostlyestDish FROM Menu;
+SELECT MAX(Price) AS CostlyestDishPrice FROM Menu;
+
+
+-- TRUNCATE TABLE Menu;
+-- DROP TABLE Customers;
+COMMIT;
