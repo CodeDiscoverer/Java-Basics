@@ -34,4 +34,9 @@
     Cursors: Named private SQL work area that stores data retrieved from a database query
     Triggers: Automatic actions that run in response to events (e.g., INSERT, UPDATE, DELETE) in a database
 
-    NORMAL FORMS, ACID Properties
+    NORMAL FORMS
+        1NF - unique name
+        2NF - each non-key attribute be dependent on the primary key
+        3NF - all non-key attributes are independent of each other
+
+    ACID Properties - Atomicity, Consistency, Isolation & Durability
