@@ -33,3 +33,5 @@
     Packages: procedures, functions, variables, exceptions etc
     Cursors: Named private SQL work area that stores data retrieved from a database query
     Triggers: Automatic actions that run in response to events (e.g., INSERT, UPDATE, DELETE) in a database
+
+    NORMAL FORMS, ACID Properties
