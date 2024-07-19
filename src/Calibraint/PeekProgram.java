@@ -27,7 +27,7 @@ public class PeekProgram {
 
         System.out.print("Enter Value of n: ");
         int n = read.nextInt();
-        System.out.println("Enter " + n + " Values into Array List: ");
+        System.out.println("Enter " + n + " Values into List: ");
         for (int i = 0; i < n; i++) {
             list.add(read.nextInt());
         }
