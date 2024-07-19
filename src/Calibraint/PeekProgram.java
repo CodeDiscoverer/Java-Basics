@@ -12,10 +12,12 @@ public class PeekProgram {
         int max = Collections.max(list);
         int indexMax = list.indexOf(max);
 
-        if(max > list.get(indexMax-1) && max > list.get(indexMax+1)){
+        if(indexMax == list.size()-1 || indexMax == 0){
+            System.out.println("NULL");
+        }
+        else if(max > list.get(indexMax-1) && max > list.get(indexMax+1)){
             System.out.println(max);
         }
-
     }
 
     public static void main(String[] args) {
