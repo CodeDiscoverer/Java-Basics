@@ -15,9 +15,9 @@ class ProductOfFirstSecondLargestValue{
 
     public int Solve(){
         System.out.println(list);
-        int firstLargestElement = Collections.max(list);
-        list.remove(Integer.valueOf(firstLargestElement));
-        int secondLargestElement = Collections.max(list);
+        Integer firstLargestElement = Collections.max(list);
+        list.remove(firstLargestElement);
+        Integer secondLargestElement = Collections.max(list);
 
         return firstLargestElement * secondLargestElement;
     }
