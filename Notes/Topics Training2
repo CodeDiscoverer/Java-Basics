@@ -1,14 +1,29 @@
 09/07/2024 - DSA
     Linked List, Queue, Deque, HashMap, HashSet, LRU Page Frame Concept...
+    Sorting - Bubble, Insert, Quick, Selection, Merge, Heap...
+    Searching - Linear, Binary...
 
 13/07/2024 - JAVA
+    ENUM
+    Packages
     Class
     Objects
     Inheritance - Single, Multiple, Multilevel, Hierarchical, Hybrid
     Polymorphism - Overloading & Overriding
     Abstraction - Abstract & Interface
     Encapsulation - class as private, methods as public
-    FINAl, STATIC
+    Constructors & Destructors
+    FINAl, STATIC, THIS, FINALLY, TRY, CATCH, THROW, THROWS
+    WRAPPER CLASS - Un Boxing & Auto Boxing
+    Collections
+    Generics
+    Exception Handling
+    Custom Exception
+    Multithreading - Thread, Runnable, Synchronized
+    Lambda
+    File Handling
+    Swing, AWT
+    JDBC
 
 15/07/2024 - SQL & PL/SQL
     CONSTRAINTS - Primary Key, Not Null, Unique, Check, Default & Foreign Key
