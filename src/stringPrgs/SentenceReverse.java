@@ -11,6 +11,7 @@ public class SentenceReverse {
         String[] words = original.split(" ");
 
         StringBuilder reversedSentence = new StringBuilder();
+        //StringBuffer reversedSentence = new StringBuffer();
 
         for(int i = words.length-1; i >= 0; i--){
             //System.out.print(words[i] + " ");
