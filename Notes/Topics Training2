@@ -11,7 +11,7 @@
     Inheritance - Single, Multiple, Multilevel, Hierarchical, Hybrid
     Polymorphism - Overloading & Overriding
     Abstraction - Abstract & Interface
-    Encapsulation - class as private, methods as public
+    Encapsulation - variables as private, methods as public
     Constructors & Destructors - finalize auto garb collector
     FINAl, STATIC, THIS, FINALLY, TRY, CATCH, THROW, THROWS
     WRAPPER CLASS - Un Boxing & Auto Boxing
