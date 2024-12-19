@@ -30,5 +30,5 @@ public class RevAlpha {
         System.out.println(outputSentence);
     }
 }
-// Given Input: ab, cde!
-// Expected Output: ed, cba!
+// Given Input: ab, cde.
+// Expected Output: ed, cba.
